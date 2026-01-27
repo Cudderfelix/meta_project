@@ -6,4 +6,11 @@ body{
         margin: 20px;   
         align-self: center;
     }
+    .parent{
+         .child{
+        float: right;
+    }
 }
+
+    }
+    
