@@ -141,3 +141,24 @@ function wordMatch (word, match){
     }
 }
 wordMatch('Javascript', 'a');
+
+// object notation
+let person = {
+    name: 'Nakadamus',
+    age: 30,
+    location: 'Benue State',
+    profession: 'Software Developer'
+}
+// dot notation
+person.location= 'Anambra State';
+console.log(person);
+
+// bracket notation
+person ['profession'] ='Kubernetes Engineer';
+
+console.log(person);
+
+//math methods
+var random = Math.random() *100;
+var rounded = Math.round(random);
+console.log('The random & rounded number is:', rounded);
