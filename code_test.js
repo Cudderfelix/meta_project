@@ -55,3 +55,76 @@ switch (medalPosition1) {
     default:
     console.log('No medal has been won');
 }
+
+// looping constructs
+//for loop
+for (let i =22; i<=65; i++){
+    console.log(i);
+}
+
+//while loop
+let count =1;
+while (count <=45) {
+    console.log(count);
+    count++;
+}
+
+// Writing functions
+function arrayOutput (arr) {
+    for (let i =0; i < arr.length; i++){
+      console.log(arr[i]);
+    }
+}
+let fruits = ['apple', 'cashew-nut', 'banana', 'oranges', 'grapes', 'mangoes','pawpaw','kiwi', 'watermelon','avocado'];
+arrayOutput(fruits);
+
+// write a bit of complex functions with if--else statements and loops
+function complexFunction (arr) {
+    for (let i=0; i < arr.length; i++) {
+        if (arr.length == 1){
+            console.log('Fruit name:', arr[i], 'is the first fruit');
+        }
+        else if (arr.length == 2){
+            console.log('Fruit name:', arr[i], 'is the second fruit');
+        }
+        else if (arr.length == 3) {
+            console.log('Fruit name:', arr[i], 'is the third fruit');
+        }
+        else {
+            console.log('Fruit name:', arr[i], 'is part of the fruit list');
+        }
+    }
+}
+complexFunction(fruits);
+
+//write a bit of complex functions with switch statements and loops
+function complexSwitchFunction (arr) {
+    for (let i= 0; i < arr.length; i++) {
+      switch (arr.length) {
+        case 1:
+            console.log('Fruit name:', arr[i], 'is the first fruit');
+            break;
+        case 2:
+            console.log('Fruit nameL',arr[i], 'is the second fruit');
+            break;
+        case 3:
+            console.log('Fruit name:', arr[i], 'is the third fruit');
+            break;
+        case 4:
+            console.log('Fruit name:', arr[i], 'is the fourth fruit');
+            break;
+        case 5:
+            console.log('Fruit name:', arr[i], 'is the fifth fruit');
+            break;
+        case 6:
+            console.log('Fruit name:', arr[i], 'is the sixth fruit');
+            break;
+        case 7:
+            console.log('Fruit name:', arr[i], 'Is the seventh fruit');
+            break;
+        default:
+            console.log('Fruit name:', arr[i], 'Is part of the fruit list');
+      }  
+    }
+}
+complexSwitchFunction(fruits);
