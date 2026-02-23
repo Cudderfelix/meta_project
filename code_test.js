@@ -162,3 +162,16 @@ console.log(person);
 var random = Math.random() *100;
 var rounded = Math.round(random);
 console.log('The random & rounded number is:', rounded);
+
+//object methods
+let myName = {
+    name: "Chukwuemeka - Eze",
+    age: 39,
+    location : "kingdom of Dahomey",
+    profession: "Software Engineer",
+    greet: function() {
+        console.log('Hello! i\'m from the kingdom of Dahomey, nice to meet you!;');
+    }
+}
+console.log(myName);
+myName.greet();
