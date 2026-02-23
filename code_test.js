@@ -128,3 +128,16 @@ function complexSwitchFunction (arr) {
     }
 }
 complexSwitchFunction(fruits);
+
+// testing word matching functions
+function wordMatch (word, match){
+    for (let i=0; i < word.length; i++) {
+        if (word[i] == match) {
+            console.log ('The word', word[i], 'is a match to the word', match);
+        }
+        else {
+            console.log('The word', word[i], 'is not a match to the word', match);
+        }
+    }
+}
+wordMatch('Javascript', 'a');
