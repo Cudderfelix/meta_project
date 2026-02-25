@@ -1,4 +1,4 @@
-console.log('I am learning JavaScript!');
+/* console.log('I am learning JavaScript!');
 function greet(name) {
     return `Hello, ${name}!`;
 }
@@ -175,3 +175,33 @@ let myName = {
 }
 console.log(myName);
 myName.greet();
+
+//try catch error handling
+try {
+    console.log(a+b)
+}
+catch(err) {
+    console.log('An error occurred', err.message);
+    console.log('The error has been handled gracefully')
+}
+console.log('The encountered error did not crash the program, it was handled gracefully');
+
+// Object Oriented Programming versus Functional Programming
+
+let currencyOne = 'USD';
+let currencyTwo = 'EUR';
+let currencyThree = 'GBP';
+
+function concatCurrency (cur1, cur2, cur3) {
+console.log('The concated currency are:', cur1 + cur2 + cur3);
+}
+concatCurrency(currencyOne, currencyTwo, currencyThree);
+*/
+
+// Playing with return values in Javascript
+function multiplyDigits(a, b) {
+    let multiplication = a * b;
+    return multiplication;
+    console.log(multiplication);
+}
+multiplyDigits(14,65);
