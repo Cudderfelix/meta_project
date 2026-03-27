@@ -205,3 +205,25 @@ function multiplyDigits(a, b) {
     console.log(multiplication);
 }
 multiplyDigits(14,65);
+
+
+// Testing out OOP concepts in Javascript
+let addition = {
+    num1:12,
+    num2:13,
+    add: function() {
+        return this.num1 + this.num2;
+    }
+}
+console.log(addition.add());
+
+
+let subtraction = {
+    num: 345,
+    num2: 256,
+    subtract: function (){
+        let difference = this.num - this.num2;
+        console.log('THe difference is:', difference);
+    }
+}
+subtraction.subtract();
