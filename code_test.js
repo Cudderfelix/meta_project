@@ -204,14 +204,14 @@ function multiplyDigits(a, b) {
     return multiplication;
     console.log(multiplication);
 }
-multiplyDigits(14,65);
+multiplyDigits(14, 65);
 
 
 // Testing out OOP concepts in Javascript
 let addition = {
-    num1:12,
-    num2:13,
-    add: function() {
+    num1: 12,
+    num2: 13,
+    add: function () {
         return this.num1 + this.num2;
     }
 }
@@ -221,9 +221,53 @@ console.log(addition.add());
 let subtraction = {
     num: 345,
     num2: 256,
-    subtract: function (){
+    subtract: function () {
         let difference = this.num - this.num2;
         console.log('THe difference is:', difference);
     }
 }
 subtraction.subtract();
+
+// Classes in OOP
+class Calculator {
+    constructor(num1, num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    checkEngine() {
+        console.log('The calchulator engine is working');
+    }
+    checkNumericFunction() {
+        let sum = this.num1 + this.num2;
+        console.log('The sum of the two numbers is:', sum);
+    }
+}
+let myCalculator = new Calculator(12, 13);
+myCalculator.checkEngine();
+myCalculator.checkNumericFunction();
+
+
+// Describing Polymorphism in OOP
+class brain {
+    useBrain() {
+        console.log('My brain process information');
+    }
+}
+class limbs extends brain {
+    useBrain() {
+        super.useBrain();
+        console.log('My limbs get signals from my brain to effect mobility');
+    }
+}
+class heart extends brain {
+    useBrain() {
+        console.log('My heart pumps blood to my brain for it to function properly');
+    }
+}
+
+let myLimbs = new limbs();
+let myHeart = new heart();
+myLimbs.useBrain();
+myHeart.useBrain();
+
+console.log(new Date());
