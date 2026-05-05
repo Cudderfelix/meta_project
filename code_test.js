@@ -271,3 +271,81 @@ myLimbs.useBrain();
 myHeart.useBrain();
 
 console.log(new Date());
+
+function barbeque(animal, sauce) {
+    this.animal = animal;
+    this.sauce = sauce;
+    console.log('The barbeque is ready with', this.animal, 'and', this.sauce);
+}
+let chickenMenu = new barbeque('Chicken', 'Smokey Sauce');
+let beefMenu = new barbeque('Beef', 'Spicy Goat Meat Sauce');
+console.log(chickenMenu);
+console.log(beefMenu);
+
+"abcd".match(/a/);
+
+let bird = {
+    hasWings: true,
+    canFly: true,
+    hasFeathers: true
+}
+
+let bird1 = Object.create(bird)
+{
+    bird1.hasWings = false;
+    bird1.canFly = false;
+    bird1.hasFeathers = true;
+}
+console.log('Does the penguin have feathers:', bird1.hasFeathers, '\nCan the bird fly currently:', bird1.canFly, '\nDoes the bird have wings:', bird1.hasWings);
+
+// Creeating a class with an empty constructor
+class myCar {
+    constructor(model, mileage, engineType) {
+        this.model = model;
+        this.mileage = mileage;
+        this.engineType = engineType;
+    }
+    keyStart() {
+        console.log('VROOM!! The car engine is cranking up')
+    }
+    pedalAccelerate() {
+        console.log('The car is accelerating beyond 20km/h')
+    }
+    pedalBrakes() {
+        console.log('The car is slowing down and coming to a stop')
+    }
+    hazardLights() {
+        console.log('The hazard lights are on, the car is in an emergency situation')
+    }
+    checkEngine() {
+        console.log('The car check engine light is on, the car needs to be serviced')
+    }
+    getPrototype() {
+        let proto = Object.getPrototypeOf(this);
+        console.log(proto);
+    }
+
+}
+let benz = new myCar('GLe2000', '20000km', 'v4');
+console.log(benz);
+benz.keyStart();
+benz.pedalAccelerate();
+benz.pedalBrakes();
+benz.hazardLights();
+benz.checkEngine();
+
+
+class train extends myCar {
+    constructor(model, mileage, engineType, numberOfCarriages) {
+        super(model, mileage, engineType);
+        this.numberOfCarriages = numberOfCarriages;
+    }
+}
+let bulletTrain = new train('Bullet Train', '50000km', 'Electric', 10);
+console.log(bulletTrain);
+bulletTrain.keyStart();
+bulletTrain.pedalAccelerate();
+bulletTrain.pedalBrakes();
+bulletTrain.hazardLights();
+bulletTrain.checkEngine();
+bulletTrain.getPrototype();
